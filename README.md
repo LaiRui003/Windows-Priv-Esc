@@ -15,12 +15,6 @@ Una cheatsheet con los conceptos para poder escalar privilegios en Windows.
      * [Juicy Potatos](#juicy-potatos)
      * [Port Forwarding](#port-forwarding)
 
-# Windows-Priv-Esc
-Una cheatsheet con los conceptos para poder escalar privilegios en Windows.
-
-# Windows Priv Esc
-- Notas realizadas para la preparación de OSCP
-
 
 ## Services Exploits
 - Son serivicios que corren en segundo plano si el servicios es corrido por el admin o system user y estan mal configurados pueden ser usados para escalar privilegios
